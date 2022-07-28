@@ -8,4 +8,5 @@ def main():
         print("%.2f" %(4.00 - grade_1))
     elif grade_1 >= 2.00:
         print("I'm so happy.")
+    # เขียนเล่นๆ
 main()
