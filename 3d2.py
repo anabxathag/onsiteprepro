@@ -1,19 +1,15 @@
 '''[Onsite Day 2] โดนใยแมงมุม เหมือนโดนเธอกุมหัวใจ'''
 def main():
     '''สร้างใยแมงมุม'''
-    numb = int(input())
-    web = (2 * numb) + 1
-    for row in range(web):
-        for column in range(web):
-            if column == row:
-                print("*", end=" ")
-            elif column + row == web - 1:
-                print("*", end=" ")
-            elif row == 1 or row == web - 2:
-                print("*", end=" ")
-            elif column == 1 or column == web - 2:
-                print("*", end=" ")
+    num = int(input())
+    for i in range(-num, num+1):
+        for j in range(-num, num+1):
+            con1 = abs(j) == 0 or abs(i) == 0 or abs(j) == abs(i)
+            con2 = abs(i)%2 != 0 and abs(j) <= abs(i)
+            con3 = abs(j)%2 != 0 and abs(i) <= abs(j)
+            if con1 or con2 or con3:
+                print("*", end=' ')
             else:
-                print(" ", end=" ")
+                print(" ", end=' ')
         print()
 main()

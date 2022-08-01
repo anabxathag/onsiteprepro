@@ -36,5 +36,4 @@ def sub(varlist):
     for iso in varlist:
         first /= iso
     return first
-
 main()
